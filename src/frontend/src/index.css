@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ocean Hair palette — navy + gold */
+    --background: 0.97 0.005 240;
+    --foreground: 0.15 0.02 260;
+
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.02 260;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 260;
+
+    /* Deep navy blue */
+    --primary: 0.28 0.12 255;
+    --primary-foreground: 0.99 0 0;
+
+    /* Gold accent */
+    --secondary: 0.72 0.12 75;
+    --secondary-foreground: 0.15 0.02 260;
+
+    --muted: 0.93 0.008 240;
+    --muted-foreground: 0.55 0.02 250;
+
+    --accent: 0.72 0.12 75;
+    --accent-foreground: 0.15 0.02 260;
+
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 0.99 0 0;
+
+    --border: 0.88 0.01 240;
+    --input: 0.88 0.01 240;
+    --ring: 0.28 0.12 255;
+
+    --radius: 0.75rem;
+
+    --chart-1: 0.72 0.12 75;
+    --chart-2: 0.28 0.12 255;
+    --chart-3: 0.55 0.15 290;
+    --chart-4: 0.65 0.18 145;
+    --chart-5: 0.55 0.22 27;
+
+    --sidebar: 0.28 0.12 255;
+    --sidebar-foreground: 0.99 0 0;
+    --sidebar-primary: 0.72 0.12 75;
+    --sidebar-primary-foreground: 0.15 0.02 260;
+    --sidebar-accent: 0.22 0.1 260;
+    --sidebar-accent-foreground: 0.99 0 0;
+    --sidebar-border: 0.22 0.1 260;
+    --sidebar-ring: 0.72 0.12 75;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+/* Mobile-centered app shell */
+.app-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+  background: oklch(var(--background));
+  overflow-x: hidden;
+}
+
+/* Category gradient backgrounds for products without images */
+.cat-curly {
+  background: linear-gradient(
+    135deg,
+    oklch(0.28 0.12 280),
+    oklch(0.45 0.15 290)
+  );
+}
+.cat-blonde {
+  background: linear-gradient(135deg, oklch(0.72 0.14 75), oklch(0.85 0.1 80));
+}
+.cat-bone {
+  background: linear-gradient(135deg, oklch(0.3 0.12 255), oklch(0.22 0.1 265));
+}
+.cat-body {
+  background: linear-gradient(135deg, oklch(0.35 0.1 200), oklch(0.5 0.12 210));
+}
+.cat-deep {
+  background: linear-gradient(135deg, oklch(0.2 0.12 240), oklch(0.35 0.15 255));
+}
+.cat-frontal {
+  background: linear-gradient(
+    135deg,
+    oklch(0.45 0.15 305),
+    oklch(0.35 0.12 300)
+  );
+}
+.cat-bundle {
+  background: linear-gradient(135deg, oklch(0.28 0.1 170), oklch(0.4 0.12 180));
+}
+.cat-closure {
+  background: linear-gradient(135deg, oklch(0.6 0.12 35), oklch(0.7 0.1 40));
+}
+.cat-default {
+  background: linear-gradient(135deg, oklch(0.28 0.12 255), oklch(0.4 0.1 270));
+}
+
+/* Bottom nav safe area */
+.bottom-nav {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Chat bubbles */
+.bubble-sent {
+  background: oklch(var(--primary));
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+.bubble-received {
+  background: oklch(var(--muted));
+  color: oklch(var(--foreground));
+  border-radius: 18px 18px 18px 4px;
+}
+
+/* Shimmer loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    oklch(0.92 0.005 240) 25%,
+    oklch(0.96 0.005 240) 50%,
+    oklch(0.92 0.005 240) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Scrollbar hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
