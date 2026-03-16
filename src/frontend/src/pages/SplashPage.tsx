@@ -31,7 +31,7 @@ export function SplashPage() {
             }}
           >
             <img
-              src="/assets/generated/ocean-hair-logo-transparent.dim_200x200.png"
+              src="/assets/uploads/file_000000007b0871f4a075c5d60833d2fd-1--1.png"
               alt="Ocean Hair Logo"
               className="w-28 h-28 object-contain drop-shadow-2xl"
             />

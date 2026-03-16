@@ -67,7 +67,7 @@ export function AuthPage() {
           className="flex flex-col items-center gap-3"
         >
           <img
-            src="/assets/generated/ocean-hair-logo-transparent.dim_200x200.png"
+            src="/assets/uploads/file_000000007b0871f4a075c5d60833d2fd-1--1.png"
             alt="Ocean Hair"
             className="w-16 h-16 object-contain"
           />

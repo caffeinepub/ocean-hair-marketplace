@@ -47,7 +47,7 @@ export function HomePage() {
       <div className="sticky top-0 z-40 bg-navy px-4 pt-10 pb-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
-            src="/assets/generated/ocean-hair-logo-transparent.dim_200x200.png"
+            src="/assets/uploads/file_000000007b0871f4a075c5d60833d2fd-1--1.png"
             alt="Ocean Hair"
             className="w-8 h-8 object-contain"
           />
